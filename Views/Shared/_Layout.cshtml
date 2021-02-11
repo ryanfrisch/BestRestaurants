@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurants of Provo</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="navbar">
+        <h1 class="navbar-text">Restaurants of Provo</h1>
+        <a class="nav button" asp-action="Index">Home</a>
+        <a class="nav button" asp-action="EnterSuggestions">Submit Suggestions</a>
+        <a class="nav button" asp-action="ListSuggestions">List Suggestions</a>
+    </header>
+    <h1>@ViewBag.Title</h1>
+    @RenderBody()
+    <footer>Ryan Frisch, 2021</footer>
+</body>
+
+</html>

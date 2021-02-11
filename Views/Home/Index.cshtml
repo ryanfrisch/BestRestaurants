@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "My Top 5 Recommendations";
+}
+
+@model IEnumerable<string>
+
+<body>
+    <ol>
+        @foreach (string r in Model)
+        {
+            <li>@r</li>
+        }
+
+    </ol>
+</body>

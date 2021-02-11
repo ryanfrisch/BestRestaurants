@@ -1,0 +1,24 @@
+﻿@{
+}
+
+@model IEnumerable<BestRestaurants.Models.Restaurant>
+
+
+<body>
+    <table>
+        <thead>
+            <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th>Lent To</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Restaurant r in Model)
+            {
+                <tr>
+                    <td>Ryan</td>
+                    <td>@r.RestaurantName</td>
+                    <td>@r.FavDish</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
