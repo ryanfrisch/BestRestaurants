@@ -4,28 +4,34 @@
 
 @model BestRestaurants.Models.Restaurant
 
-    <body>
-        <form asp-action="EnterSuggestions" method="post">
-            <label asp-for="UserName">Your Name:</label>
-            <input id="UserName" asp-for="UserName" />
-            <br />
-            <label asp-for="RestaurantName">Restaurant Name:</label>
-            <input id="RestaurantName" asp-for="RestaurantName" />
-            <br />
-            <label asp-for="FavDish">Favorite Dish: </label>
-            <input id="FavDish" asp-for="FavDish" />
-            <br />
-            <label asp-for="Address">Address: </label>
-            <input id="Address" asp-for="Address" />
-            <br />
-            <label asp-for="Phone">Phone: </label>
-            <input id="Phone" asp-for="Phone" />
-            <br />
-            <label asp-for="Website">Website: </label>
-            <input id="Website" asp-for="Website" />
-            <br />
-            <br />
-            <button type="submit" id="submitButton">Save Suggestion</button>
-            <div asp-validation-summary="All"></div>
-        </form>
-    </body>
+<div>
+    <form class="form-group align-content-center" asp-action="EnterSuggestions" method="post">
+        <div class="form-row">
+            <label for="UserName" asp-for="UserName">Your Name:</label>
+            <input class="form-control" id="UserName" asp-for="UserName" />
+        </div>
+        <div class="form-row">
+            <label for="RestaurantName" asp-for="RestaurantName">Restaurant Name:</label>
+            <input class="form-control" id="RestaurantName" asp-for="RestaurantName" />
+        </div>
+        <div class="form-row">
+            <label for="FavDish" asp-for="FavDish">Favorite Dish: </label>
+            <input class="form-control" id="FavDish" asp-for="FavDish" />
+        </div>
+        <div class="form-row">
+            <label for="Address" asp-for="Address">Address: </label>
+            <input class="form-control" id="Address" asp-for="Address" />
+        </div>
+        <div class="form-row">
+            <label for="Phone" asp-for="Phone">Phone: </label>
+            <input class="form-control" id="Phone" asp-for="Phone" />
+        </div>
+        <div class="form-row">
+            <label for="Website" asp-for="Website">Website: </label>
+            <input class="form-control" id="Website" asp-for="Website" />
+        </div>
+        <br />
+        <button class="btn btn-primary" type="submit" id="submitButton">Submit</button>
+        <div class="alert alert-light" asp-validation-summary="All"></div>
+    </form>
+</div>

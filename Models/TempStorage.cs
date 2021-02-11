@@ -9,9 +9,9 @@ namespace BestRestaurants.Models
     {
             private static List<Restaurant> restaurants = new List<Restaurant>();
 
-            public static IEnumerable<Restaurant> Restaurant => restaurants;
+            public static IEnumerable<Restaurant> Restaurants => restaurants;
 
-            public static void AddSuggestion(Restaurant restaurant)
+            public static void AddRestaurant(Restaurant restaurant)
             {
                 restaurants.Add(restaurant);
             }

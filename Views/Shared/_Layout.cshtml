@@ -6,16 +6,18 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 
-<body>
-    <header class="navbar">
-        <h1 class="navbar-text">Restaurants of Provo</h1>
-        <a class="nav button" asp-action="Index">Home</a>
-        <a class="nav button" asp-action="EnterSuggestions">Submit Suggestions</a>
-        <a class="nav button" asp-action="ListSuggestions">List Suggestions</a>
-    </header>
-    <h1>@ViewBag.Title</h1>
+<body class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Restaurants of Provo</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" asp-action="Index">Home</a>
+            <a class="p-2 text-dark" asp-action="ListSuggestions">List Suggestions</a>
+        </nav>
+        <a class="btn btn-outline-primary" asp-action="EnterSuggestions">Submit Suggestions</a>
+    </div>
+    <h1 class="text-center">@ViewBag.Title</h1>
     @RenderBody()
-    <footer>Ryan Frisch, 2021</footer>
+    <footer class="text-center">Ryan Frisch, 2021</footer>
 </body>
 
 </html>

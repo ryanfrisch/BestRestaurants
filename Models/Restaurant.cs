@@ -8,21 +8,24 @@ namespace BestRestaurants.Models
 {
     public class Restaurant
     {
-        public Restaurant(int rank)
+        public Restaurant()
+        {
+
+        }
+        public Restaurant(int? rank)
         {
             Rank = rank;
         }
         public int? Rank { get; }
-        [Required]
+
+        [Required(ErrorMessage ="You need to enter a Restaurant Name!")]
         public string RestaurantName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "You need to enter a Favorite Dish!")]
         public string FavDish { get; set; }
         public string Address { get; set; }
-
-        //FIX PHONE TYPE LATER?
-        [Phone]
-        [Required]
+        [RegularExpression(@"^\d{3}-\d{3}-\d{4}$", ErrorMessage = "Please format your phone number as follows: ###-###-####")]
+        [Required(ErrorMessage = "You need to enter a Phone Number!")]
         public string Phone { get; set; }
         public string Website { get; set; } = "Coming soon.";
         public string UserName { get; set; }
@@ -51,6 +54,7 @@ namespace BestRestaurants.Models
                 RestaurantName = "J Dawgs",
                 FavDish = "Polish Hot Dog",
                 Address = "858 700 E, Provo, UT 84606",
+                Phone = "(123) 543-6789",
                 Website = "jdawgs.com",
             };
 

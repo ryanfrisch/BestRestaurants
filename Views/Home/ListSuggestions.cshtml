@@ -1,13 +1,14 @@
 ﻿@{
+    ViewBag.Title = "User Suggestions";
 }
 
 @model IEnumerable<BestRestaurants.Models.Restaurant>
 
 
-<body>
-    <table>
+<div>
+    <table class="table">
         <thead>
-            <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th>Lent To</th><th>Notes</th></tr>
+            <th>User</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone</th>
         </thead>
         <tbody>
             @foreach (Restaurant r in Model)
@@ -21,4 +22,4 @@
             }
         </tbody>
     </table>
-</body>
+</div>

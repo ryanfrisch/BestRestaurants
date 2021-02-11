@@ -52,14 +52,19 @@ namespace BestRestaurants.Controllers
             //Makes sure form was valid before storing it to our temp storage, that way invalid forms aren't accepted.
             if (ModelState.IsValid)
             {
-                TempStorage.AddSuggestion(suggestionEntered);
+                TempStorage.AddRestaurant(suggestionEntered);
+                return View("ListSuggestions", TempStorage.Restaurants);
             }
-            return View();
+            else
+            {
+                return View();
+            }
+            
         }
 
         public IActionResult ListSuggestions()
         {
-            return View(TempStorage.Restaurant);
+            return View(TempStorage.Restaurants);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

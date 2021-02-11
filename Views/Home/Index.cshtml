@@ -5,11 +5,13 @@
 @model IEnumerable<string>
 
 <body>
-    <ol>
-        @foreach (string r in Model)
-        {
-            <li>@r</li>
-        }
+    <div class="list-group">
+        <ul>
+            @foreach (string r in Model)
+            {
+                <li class="list-group-item">@r</li>
+            }
 
-    </ol>
+        </ul>
+    </div>
 </body>
