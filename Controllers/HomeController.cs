@@ -25,12 +25,16 @@ namespace BestRestaurants.Controllers
 
             foreach (Restaurant r in Restaurant.GetRestaurants())
             {
+                string favdish;
                 if (string.IsNullOrEmpty(r.FavDish))
                 {
-                    string favdish = "It's all tasty!";
-
+                    favdish = "It's all tasty!";
                 }
-                topRestaurantsList.Add($"{r.RestaurantName}");
+                else
+                {
+                    favdish = r.FavDish;
+                }
+                topRestaurantsList.Add($"#{r.Rank}: {r.RestaurantName}. Favorite Dish: {favdish}. Address: {r.Address}. Phone: {r.Phone}. Website: {r.Website}");
             }
 
             return View(topRestaurantsList);
